@@ -1,0 +1,85 @@
+revolte:
+  version: '1.0'
+  project: final proj
+  appName: final web
+  config:
+    codeReview:
+      summarize: true
+      suggestFixes: true
+      commentStyle: Balanced
+    codeQuality:
+      codeStyle:
+        rules:
+          typescript/adjacentOverloadSignatures: 'off'
+          typescript/arrayType: warn
+          typescript/awaitThenable: warn
+          typescript/banTsComment: error
+          typescript/banTslintComment: warn
+          typescript/classLiteralPropertyStyle: 'off'
+          typescript/classMethodsUseThis: 'off'
+          typescript/consistentGenericConstructors: error
+          typescript/consistentIndexedObjectStyle: warn
+          typescript/consistentTypeAssertions: warn
+  workflow:
+    developerWorkflow:
+      enabled: true
+  env:
+    qa:
+      codeReview: true
+      testSuite: true
+      branch: main
+      services:
+        rid_1:
+          type: WEB_APP
+          name: web_app_service
+          entryPoint: index.js
+          properties:
+            indexPage: index.html
+            errorPage: error.html
+            enableCdn: false
+            variables:
+              BASE_URL: /api/v1
+    staging:
+      codeReview: true
+      testSuite: true
+      branch: main
+      services:
+        rid_1:
+          type: WEB_APP
+          name: web_app_service
+          entryPoint: index.js
+          properties:
+            indexPage: index.html
+            errorPage: error.html
+            enableCdn: false
+            variables:
+              BASE_URL: /api/v1
+    production:
+      codeReview: true
+      testSuite: true
+      branch: main
+      services:
+        rid_1:
+          type: WEB_APP
+          name: web_app_service
+          entryPoint: index.js
+          properties:
+            indexPage: index.html
+            errorPage: error.html
+            enableCdn: false
+            variables:
+              BASE_URL: /api/v1
+    preview:
+      codeReview: true
+      testSuite: true
+      services:
+        rid_1:
+          type: WEB_APP
+          name: web_app_service
+          entryPoint: index.js
+          properties:
+            indexPage: index.html
+            errorPage: error.html
+            enableCdn: false
+            variables:
+              BASE_URL: /api/v1
