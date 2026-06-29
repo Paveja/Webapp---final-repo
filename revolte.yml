@@ -71,6 +71,7 @@ revolte:
               BASE_URL: /api/v1
     preview:
       codeReview: true
+      codeQuality: true
       testSuite: true
       services:
         rid_1:
