@@ -69,7 +69,7 @@ revolte:
       codeReview: true
       codeQuality: true
       testSuite: false
-      branch: Test-branch
+      branch: main
       services:
         rid_1:
           type: WEB_APP
