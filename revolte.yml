@@ -24,11 +24,11 @@ revolte:
           typescript/consistentTypeImports: warn
           typescript/consistentReturn: 'off'
       excludes:
-        - '"vite.config.ts"'
-        - '"dist"'
-        - '"node_modules"'
-        - '"**/*.js"'
-        - '"**/*.cjs"'
+        - vite.config.ts
+        - '**/*.js'
+        - . **/*.cjs
+      includes:
+        - src/**/*
   workflow:
     developerWorkflow:
       enabled: true
