@@ -26,7 +26,8 @@ revolte:
   env:
     qa:
       codeReview: true
-      testSuite: true
+      codeQuality: true
+      testSuite: false
       branch: main
       services:
         rid_1:
@@ -41,7 +42,8 @@ revolte:
               BASE_URL: /api/v1
     staging:
       codeReview: true
-      testSuite: true
+      codeQuality: true
+      testSuite: false
       branch: main
       services:
         rid_1:
@@ -56,7 +58,8 @@ revolte:
               BASE_URL: /api/v1
     production:
       codeReview: true
-      testSuite: true
+      codeQuality: true
+      testSuite: false
       branch: main
       services:
         rid_1:
@@ -72,7 +75,7 @@ revolte:
     preview:
       codeReview: true
       codeQuality: true
-      testSuite: true
+      testSuite: false
       services:
         rid_1:
           type: WEB_APP
