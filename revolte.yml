@@ -20,6 +20,8 @@ revolte:
           typescript/consistentGenericConstructors: error
           typescript/consistentIndexedObjectStyle: warn
           typescript/consistentTypeAssertions: warn
+          typescript/consistentTypeExports: error
+          typescript/consistentTypeImports: warn
   workflow:
     developerWorkflow:
       enabled: true
