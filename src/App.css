@@ -37,6 +37,49 @@
   padding: 2em;
 }
 
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.decrement-btn,
+.increment-btn {
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.decrement-btn {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.decrement-btn:hover {
+  border-color: #ff5252;
+}
+
+.increment-btn {
+  background-color: #51cf66;
+  color: white;
+}
+
+.increment-btn:hover {
+  border-color: #40c057;
+}
+
+.count-display {
+  font-size: 1.5em;
+  font-weight: bold;
+  min-width: 150px;
+}
+
 .read-the-docs {
   color: #888;
 }
