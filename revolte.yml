@@ -45,7 +45,7 @@ revolte:
             variables:
               BASE_URL: /api/v1
     qa:
-      branch: main
+      branch: Test-branch
       codeReview: true
       codeQuality: true
       services:
