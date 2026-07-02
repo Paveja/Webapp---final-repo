@@ -1,36 +1,27 @@
 revolte:
   version: '1.0'
-  project: final proj
-  appName: final web
+  project: Prod Test
+  appName: Webapp
   config:
     codeReview:
       summarize: true
       suggestFixes: true
       commentStyle: Balanced
     codeQuality:
-      codeStyle:
-        rules:
-          typescript/adjacentOverloadSignatures: 'off'
-          typescript/arrayType: warn
-          typescript/awaitThenable: warn
-          typescript/banTsComment: error
-          typescript/banTslintComment: warn
-          typescript/classLiteralPropertyStyle: 'off'
-          typescript/classMethodsUseThis: 'off'
-          typescript/consistentGenericConstructors: error
-          typescript/consistentIndexedObjectStyle: warn
-          typescript/consistentTypeAssertions: warn
-          typescript/consistentTypeExports: error
-          typescript/consistentTypeImports: warn
+      excludes:
+        - vite.config.ts
+        - '**/*.js'
+        - . **/*.cjs
+      includes:
+        - src/**/*
   workflow:
     developerWorkflow:
       enabled: true
   env:
-    qa:
+    staging:
+      branch: Test-branch
       codeReview: true
       codeQuality: true
-      testSuite: false
-      branch: main
       services:
         rid_1:
           type: WEB_APP
@@ -42,11 +33,10 @@ revolte:
             enableCdn: false
             variables:
               BASE_URL: /api/v1
-    staging:
+    qa:
+      branch: Test-branch
       codeReview: true
       codeQuality: true
-      testSuite: false
-      branch: main
       services:
         rid_1:
           type: WEB_APP
@@ -59,10 +49,9 @@ revolte:
             variables:
               BASE_URL: /api/v1
     production:
+      branch: main
       codeReview: true
       codeQuality: true
-      testSuite: false
-      branch: main
       services:
         rid_1:
           type: WEB_APP
@@ -77,7 +66,6 @@ revolte:
     preview:
       codeReview: true
       codeQuality: true
-      testSuite: false
       services:
         rid_1:
           type: WEB_APP
