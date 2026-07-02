@@ -8,6 +8,17 @@ revolte:
       suggestFixes: true
       commentStyle: Balanced
     codeQuality:
+      codeStyle:
+        rules:
+          typescript/arrayType: warn
+          typescript/awaitThenable: warn
+          typescript/banTsComment: error
+          typescript/banTslintComment: warn
+          typescript/consistentGenericConstructors: error
+          typescript/consistentIndexedObjectStyle: warn
+          typescript/consistentTypeAssertions: warn
+          typescript/consistentTypeExports: error
+          typescript/consistentTypeImports: warn
       excludes:
         - vite.config.ts
         - '**/*.js'
@@ -34,7 +45,7 @@ revolte:
             variables:
               BASE_URL: /api/v1
     qa:
-      branch: Test-branch
+      branch: main
       codeReview: true
       codeQuality: true
       services:
